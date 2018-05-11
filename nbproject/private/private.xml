@@ -5,10 +5,13 @@
         <group>
             <file>file:/C:/Java/pencariKost/src/profil.java</file>
             <file>file:/C:/Java/pencariKost/src/simpan.java</file>
+            <file>file:/C:/Java/pencariKost/src/bookinguser.java</file>
             <file>file:/C:/Java/pencariKost/src/klikPencari.java</file>
             <file>file:/C:/Java/pencariKost/src/pencarian.java</file>
             <file>file:/C:/Java/pencariKost/src/klikPemilik.java</file>
             <file>file:/C:/Java/pencariKost/src/login.java</file>
+            <file>file:/C:/Java/pencariKost/src/bookingpemilik.java</file>
+            <file>file:/C:/Java/pencariKost/src/koneksiDB.java</file>
             <file>file:/C:/Java/pencariKost/src/kos1.java</file>
             <file>file:/C:/Java/pencariKost/src/tampilankost.java</file>
         </group>

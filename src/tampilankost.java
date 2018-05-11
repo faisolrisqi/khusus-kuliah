@@ -32,9 +32,14 @@ public class tampilankost extends javax.swing.JFrame {
         fasilitasKM = new javax.swing.JComboBox<>();
         fasilitasUmum = new javax.swing.JComboBox<>();
         aksesLingkungan = new javax.swing.JComboBox<>();
-        keteranganLain = new javax.swing.JComboBox<>();
-        deskripsiKost = new javax.swing.JComboBox<>();
-        reviews = new javax.swing.JComboBox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        daerah = new javax.swing.JTextField();
+        kota = new javax.swing.JTextField();
+        jmlkmr = new javax.swing.JTextField();
+        book = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,25 +63,52 @@ public class tampilankost extends javax.swing.JFrame {
                 fasilitasKamarActionPerformed(evt);
             }
         });
-        getContentPane().add(fasilitasKamar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 320, 210, 30));
+        getContentPane().add(fasilitasKamar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 200, 20));
 
         fasilitasKM.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ember", "Gayung", "Toilet duduk", "Gantungan" }));
-        getContentPane().add(fasilitasKM, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 355, 210, 20));
+        fasilitasKM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fasilitasKMActionPerformed(evt);
+            }
+        });
+        getContentPane().add(fasilitasKM, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 185, 200, 20));
 
         fasilitasUmum.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "TV", "Kulkas", " " }));
-        getContentPane().add(fasilitasUmum, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 385, 210, -1));
+        getContentPane().add(fasilitasUmum, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 235, 200, -1));
 
         aksesLingkungan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ATM", "Masjid", "Warung" }));
-        getContentPane().add(aksesLingkungan, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 415, 210, -1));
+        getContentPane().add(aksesLingkungan, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 200, -1));
 
-        getContentPane().add(keteranganLain, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 445, 210, -1));
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
-        getContentPane().add(deskripsiKost, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 475, 210, 20));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 380, -1));
 
-        reviews.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "****" }));
-        getContentPane().add(reviews, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 500, 210, 30));
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lihat.png"))); // NOI18N
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 380, -1));
+        getContentPane().add(daerah, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, 180, -1));
+        getContentPane().add(kota, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 410, 180, -1));
+
+        jmlkmr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmlkmrActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jmlkmr, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, 180, -1));
+
+        book.setContentAreaFilled(false);
+        book.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bookActionPerformed(evt);
+            }
+        });
+        getContentPane().add(book, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 520, 100, 30));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Desain/MelihatKost.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 820, 600));
 
         pack();
@@ -90,6 +122,19 @@ public class tampilankost extends javax.swing.JFrame {
     private void fasilitasKamarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fasilitasKamarActionPerformed
 
     }//GEN-LAST:event_fasilitasKamarActionPerformed
+
+    private void fasilitasKMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fasilitasKMActionPerformed
+    
+    }//GEN-LAST:event_fasilitasKMActionPerformed
+
+    private void jmlkmrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmlkmrActionPerformed
+     
+    }//GEN-LAST:event_jmlkmrActionPerformed
+
+    private void bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookActionPerformed
+    new bookinguser().setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_bookActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,13 +174,18 @@ public class tampilankost extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> aksesLingkungan;
     private javax.swing.JButton back;
+    private javax.swing.JButton book;
     private javax.swing.JButton close;
-    private javax.swing.JComboBox<String> deskripsiKost;
+    private javax.swing.JTextField daerah;
     private javax.swing.JComboBox<String> fasilitasKM;
     private javax.swing.JComboBox<String> fasilitasKamar;
     private javax.swing.JComboBox<String> fasilitasUmum;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JComboBox<String> keteranganLain;
-    private javax.swing.JComboBox<String> reviews;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextField jmlkmr;
+    private javax.swing.JTextField kota;
     // End of variables declaration//GEN-END:variables
 }

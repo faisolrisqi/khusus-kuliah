@@ -26,57 +26,15 @@ public class profil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        kos1 = new javax.swing.JButton();
-        kos2 = new javax.swing.JButton();
-        kos3 = new javax.swing.JButton();
-        kos4 = new javax.swing.JButton();
         back = new javax.swing.JButton();
         close = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        lihatan = new javax.swing.JButton();
+        daftarkan = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        kos1.setFont(new java.awt.Font("Tahoma", 0, 40)); // NOI18N
-        kos1.setText("+");
-        kos1.setContentAreaFilled(false);
-        kos1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kos1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(kos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 170, 90));
-
-        kos2.setFont(new java.awt.Font("Tahoma", 0, 40)); // NOI18N
-        kos2.setText("+");
-        kos2.setContentAreaFilled(false);
-        kos2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kos2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(kos2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 170, 90));
-
-        kos3.setFont(new java.awt.Font("Tahoma", 0, 40)); // NOI18N
-        kos3.setText("+");
-        kos3.setContentAreaFilled(false);
-        kos3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kos3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(kos3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 170, 90));
-
-        kos4.setFont(new java.awt.Font("Tahoma", 0, 40)); // NOI18N
-        kos4.setText("+");
-        kos4.setContentAreaFilled(false);
-        kos4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                kos4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(kos4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 170, 90));
 
         back.setContentAreaFilled(false);
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -89,39 +47,47 @@ public class profil extends javax.swing.JFrame {
         close.setContentAreaFilled(false);
         getContentPane().add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(773, 0, 30, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tambah.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 810, 600));
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Kos 1", "Kos 2", "Kos 3", "Kos 4" }));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 300, 60));
 
-        jButton1.setText("jButton1");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 180, 90));
+        lihatan.setContentAreaFilled(false);
+        lihatan.setOpaque(false);
+        lihatan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lihatanActionPerformed(evt);
+            }
+        });
+        getContentPane().add(lihatan, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, 160, 40));
+
+        daftarkan.setContentAreaFilled(false);
+        daftarkan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                daftarkanActionPerformed(evt);
+            }
+        });
+        getContentPane().add(daftarkan, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 220, 100));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Desain/tambah lihat.png"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 810, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void kos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kos1ActionPerformed
-    new kos1().setVisible(true);
-    this.dispose();
-    }//GEN-LAST:event_kos1ActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
     new login().setVisible(true);
     this.dispose();
     }//GEN-LAST:event_backActionPerformed
 
-    private void kos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kos2ActionPerformed
-    new kos1().setVisible(true);
+    private void daftarkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_daftarkanActionPerformed
+    new simpan().setVisible(true);
     this.dispose();
-    }//GEN-LAST:event_kos2ActionPerformed
+    }//GEN-LAST:event_daftarkanActionPerformed
 
-    private void kos3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kos3ActionPerformed
+    private void lihatanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lihatanActionPerformed
     new kos1().setVisible(true);
     this.dispose();
-    }//GEN-LAST:event_kos3ActionPerformed
-
-    private void kos4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kos4ActionPerformed
-    new kos1().setVisible(true);
-    this.dispose();
-    }//GEN-LAST:event_kos4ActionPerformed
+    }//GEN-LAST:event_lihatanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,11 +127,9 @@ public class profil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
     private javax.swing.JButton close;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton daftarkan;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton kos1;
-    private javax.swing.JButton kos2;
-    private javax.swing.JButton kos3;
-    private javax.swing.JButton kos4;
+    private javax.swing.JButton lihatan;
     // End of variables declaration//GEN-END:variables
 }

@@ -72,9 +72,9 @@ public class pencarian extends javax.swing.JFrame {
                 kos1ActionPerformed(evt);
             }
         });
-        getContentPane().add(kos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 240, 40));
+        getContentPane().add(kos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 240, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Userinterfacediagram2_1.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Desain/Userinterfacediagram2.png"))); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 820, 620));
 
         pack();

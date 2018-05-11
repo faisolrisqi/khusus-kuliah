@@ -45,13 +45,6 @@ public static String lengkapp;
         jCheckBox29 = new javax.swing.JCheckBox();
         jCheckBox30 = new javax.swing.JCheckBox();
         jCheckBox31 = new javax.swing.JCheckBox();
-        akseslingkungan = new javax.swing.JPanel();
-        warung = new javax.swing.JCheckBox();
-        jCheckBox17 = new javax.swing.JCheckBox();
-        jCheckBox18 = new javax.swing.JCheckBox();
-        jCheckBox19 = new javax.swing.JCheckBox();
-        jCheckBox20 = new javax.swing.JCheckBox();
-        jCheckBox21 = new javax.swing.JCheckBox();
         keteranganlain = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
@@ -75,12 +68,22 @@ public static String lengkapp;
         jCheckBox13 = new javax.swing.JCheckBox();
         jCheckBox14 = new javax.swing.JCheckBox();
         jCheckBox15 = new javax.swing.JCheckBox();
+        akseslingkungan = new javax.swing.JPanel();
+        warung = new javax.swing.JCheckBox();
+        jCheckBox17 = new javax.swing.JCheckBox();
+        jCheckBox18 = new javax.swing.JCheckBox();
+        jCheckBox19 = new javax.swing.JCheckBox();
+        jCheckBox20 = new javax.swing.JCheckBox();
+        jCheckBox21 = new javax.swing.JCheckBox();
         back = new javax.swing.JButton();
         simpan = new javax.swing.JButton();
         close = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -146,53 +149,13 @@ public static String lengkapp;
 
         jTabbedPane1.addTab("Fasilitas Umum", fasilitasumum);
 
-        akseslingkungan.setBackground(new java.awt.Color(204, 204, 255));
-        akseslingkungan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        warung.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        warung.setText("Warung");
-        warung.setContentAreaFilled(false);
-        akseslingkungan.add(warung, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
-
-        jCheckBox17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jCheckBox17.setText("ATM/Bank");
-        jCheckBox17.setContentAreaFilled(false);
-        akseslingkungan.add(jCheckBox17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
-
-        jCheckBox18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jCheckBox18.setText("Kampus/Sekolah");
-        jCheckBox18.setContentAreaFilled(false);
-        akseslingkungan.add(jCheckBox18, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, -1, -1));
-
-        jCheckBox19.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jCheckBox19.setText("Apotek");
-        jCheckBox19.setContentAreaFilled(false);
-        akseslingkungan.add(jCheckBox19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
-
-        jCheckBox20.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jCheckBox20.setText("Masjid");
-        jCheckBox20.setContentAreaFilled(false);
-        jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox20ActionPerformed(evt);
-            }
-        });
-        akseslingkungan.add(jCheckBox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, -1, -1));
-
-        jCheckBox21.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jCheckBox21.setText("Mini Market");
-        jCheckBox21.setContentAreaFilled(false);
-        akseslingkungan.add(jCheckBox21, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
-
-        jTabbedPane1.addTab("Akses Lingkungan", akseslingkungan);
-
         keteranganlain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
         jScrollPane2.setViewportView(jTextArea2);
 
-        keteranganlain.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 510, 210));
+        keteranganlain.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 200));
 
         jTabbedPane1.addTab("Keterangan Lain", keteranganlain);
 
@@ -202,7 +165,7 @@ public static String lengkapp;
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        deskripsikost.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 200));
+        deskripsikost.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 530, 190));
 
         jTabbedPane1.addTab("Deskripsi Kost", deskripsikost);
 
@@ -317,7 +280,47 @@ public static String lengkapp;
 
         jTabbedPane1.addTab("Fasilitas Kamar Mandi", fasilitasmnd);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 530, 250));
+        akseslingkungan.setBackground(new java.awt.Color(204, 204, 255));
+        akseslingkungan.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        warung.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        warung.setText("Warung");
+        warung.setContentAreaFilled(false);
+        akseslingkungan.add(warung, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jCheckBox17.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jCheckBox17.setText("ATM/Bank");
+        jCheckBox17.setContentAreaFilled(false);
+        akseslingkungan.add(jCheckBox17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 20, -1, -1));
+
+        jCheckBox18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jCheckBox18.setText("Kampus/Sekolah");
+        jCheckBox18.setContentAreaFilled(false);
+        akseslingkungan.add(jCheckBox18, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, -1, -1));
+
+        jCheckBox19.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jCheckBox19.setText("Apotek");
+        jCheckBox19.setContentAreaFilled(false);
+        akseslingkungan.add(jCheckBox19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+
+        jCheckBox20.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jCheckBox20.setText("Masjid");
+        jCheckBox20.setContentAreaFilled(false);
+        jCheckBox20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox20ActionPerformed(evt);
+            }
+        });
+        akseslingkungan.add(jCheckBox20, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, -1, -1));
+
+        jCheckBox21.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jCheckBox21.setText("Mini Market");
+        jCheckBox21.setContentAreaFilled(false);
+        akseslingkungan.add(jCheckBox21, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
+
+        jTabbedPane1.addTab("Akses Lingkungan", akseslingkungan);
+
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 540, 240));
 
         back.setContentAreaFilled(false);
         back.addActionListener(new java.awt.event.ActionListener() {
@@ -342,14 +345,14 @@ public static String lengkapp;
             }
         });
         getContentPane().add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(773, 0, 30, 20));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 165, 180, -1));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 189, 180, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 213, 180, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 237, 180, -1));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 180, -1));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel2.setText("Nama KOS");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 130, 30));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 190, 270, 30));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/simpan2.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 830, 600));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Desain/Simpangan.png"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 830, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -436,6 +439,7 @@ public static String lengkapp;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel akseslingkungan;
     private javax.swing.JButton back;
+    private javax.swing.JLabel background;
     private javax.swing.JButton close;
     private javax.swing.JPanel deskripsikost;
     private javax.swing.JPanel fasilitaskmr;
@@ -471,14 +475,16 @@ public static String lengkapp;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.ButtonGroup kelamin;
     private javax.swing.JPanel keteranganlain;
     private javax.swing.JButton simpan;

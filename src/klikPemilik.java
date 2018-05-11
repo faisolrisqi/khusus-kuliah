@@ -6,6 +6,9 @@ import javax.swing.JOptionPane;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -13,11 +16,28 @@ import javax.swing.JOptionPane;
  */
 public class klikPemilik extends javax.swing.JFrame {
 
+    int id;
+    String username, password, no_hp;
+    String no, ps;
+
     /**
      * Creates new form klikPemilik
      */
     public klikPemilik() {
         initComponents();
+        try {
+            String sqls = "select * from users order by userid desc limit 1";
+            java.sql.Connection conn = (Connection) koneksiDB.configDB();
+            java.sql.Statement pst = conn.createStatement();
+            ResultSet rs = pst.executeQuery(sqls);
+            if (rs.next()) {
+                id = rs.getInt("userid");
+                id += 1;
+            }
+            pst.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }
 
     /**
@@ -44,6 +64,11 @@ public class klikPemilik extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         back.setContentAreaFilled(false);
+        back.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backActionPerformed(evt);
+            }
+        });
         getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 70, 20));
 
         register.setContentAreaFilled(false);
@@ -81,26 +106,67 @@ public class klikPemilik extends javax.swing.JFrame {
         close.setContentAreaFilled(false);
         getContentPane().add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(763, 3, 30, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/masuk.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Desain/LoginPemilik.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -40, 830, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerActionPerformed
-    JOptionPane.showMessageDialog(this, "Anda telah terdaftar");
-    new profil().setVisible(true);
-    this.dispose();
+        username = isiusername.getText();
+        no_hp = isinoregister.getText();
+        password = isipasswordregister.getText();
+        try {
+            String sqls = "insert into users values (" + id + ", '" + username + "','" + password + "','" + no_hp + "')";
+            java.sql.Connection conn = (Connection) koneksiDB.configDB();
+            java.sql.PreparedStatement pst = conn.prepareStatement(sqls);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Input Data berhasil!");
+            JOptionPane.showMessageDialog(this, "Anda telah terdaftar");
+            pst.close();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+
+//    new profil().setVisible(true);
+//    this.dispose();
     }//GEN-LAST:event_registerActionPerformed
 
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
-    new profil().setVisible(true);
-    this.dispose();
+        no = isinologin.getText();
+        ps = isipasswordlogin.getText();
+        try {
+            String sqls = "select * from users";
+            java.sql.Connection conn = (Connection) koneksiDB.configDB();
+            java.sql.PreparedStatement pst = conn.prepareStatement(sqls);
+            ResultSet rs = pst.executeQuery(sqls);
+            while (rs.next()) {
+                String nohp = rs.getString("no_hp");
+                String passs = rs.getString("password");
+                if (no.equalsIgnoreCase(nohp) && ps.equals(passs)) {
+                    JOptionPane.showMessageDialog(null, "Berhasil Login");
+                    new profil().setVisible(true);
+                    this.dispose();
+                    break;
+                }else{
+                JOptionPane.showMessageDialog(null, "Login Gagal,cek nohp dan password");
+                isinologin.requestFocus();
+                break;
+                }
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
     }//GEN-LAST:event_loginActionPerformed
 
     private void isiusernameMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_isiusernameMouseEntered
-    
+
     }//GEN-LAST:event_isiusernameMouseEntered
+
+    private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
+        new login().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_backActionPerformed
 
     /**
      * @param args the command line arguments

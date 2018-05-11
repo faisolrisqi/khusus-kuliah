@@ -40,7 +40,7 @@ public class login extends javax.swing.JFrame {
                 pemilikActionPerformed(evt);
             }
         });
-        getContentPane().add(pemilik, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 140, 40));
+        getContentPane().add(pemilik, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 140, 40));
 
         pencari.setContentAreaFilled(false);
         pencari.addActionListener(new java.awt.event.ActionListener() {
@@ -48,7 +48,7 @@ public class login extends javax.swing.JFrame {
                 pencariActionPerformed(evt);
             }
         });
-        getContentPane().add(pencari, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 150, 40));
+        getContentPane().add(pencari, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 150, 40));
 
         close.setContentAreaFilled(false);
         close.addActionListener(new java.awt.event.ActionListener() {
@@ -58,7 +58,7 @@ public class login extends javax.swing.JFrame {
         });
         getContentPane().add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 0, 30, 20));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Desain/TampilanAwal.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, 810, 600));
 
         pack();

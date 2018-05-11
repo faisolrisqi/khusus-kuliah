@@ -15,8 +15,8 @@ public class klikPencari extends javax.swing.JFrame {
      */
     public klikPencari() {
         initComponents();
-        Balikpapan.setVisible(false);
-        Bandar.setVisible(false);
+//        Balikpapan.setVisible(false);
+//        Bandar.setVisible(false);
     }
 
     /**
@@ -32,10 +32,9 @@ public class klikPencari extends javax.swing.JFrame {
         close = new javax.swing.JButton();
         cari = new javax.swing.JButton();
         ketikcari = new javax.swing.JTextField();
-        test = new javax.swing.JButton();
-        test2 = new javax.swing.JButton();
         Balikpapan = new javax.swing.JComboBox<>();
         Bandar = new javax.swing.JComboBox<>();
+        cekkosan = new javax.swing.JButton();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -67,24 +66,7 @@ public class klikPencari extends javax.swing.JFrame {
         });
         getContentPane().add(ketikcari, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 50, 180, 20));
 
-        test.setBorderPainted(false);
-        test.setContentAreaFilled(false);
-        test.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                testActionPerformed(evt);
-            }
-        });
-        getContentPane().add(test, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 80, 30));
-
-        test2.setBorderPainted(false);
-        test2.setContentAreaFilled(false);
-        test2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                test2ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(test2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 180, 80, 30));
-
+        Balikpapan.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Balikpapan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Balikpapan", "Kebonsari", "Sumbersari", "Botolinggo" }));
         Balikpapan.setBorder(null);
         Balikpapan.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,17 +79,26 @@ public class klikPencari extends javax.swing.JFrame {
                 BalikpapanActionPerformed(evt);
             }
         });
-        getContentPane().add(Balikpapan, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 150, 290, 28));
+        getContentPane().add(Balikpapan, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 350, 60));
 
+        Bandar.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         Bandar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Bandar Lampung", "Item 2", "Item 3", "Item 4" }));
         Bandar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BandarActionPerformed(evt);
             }
         });
-        getContentPane().add(Bandar, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 180, 290, 28));
+        getContentPane().add(Bandar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 350, 60));
 
-        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pencarian berdasar kota.png"))); // NOI18N
+        cekkosan.setContentAreaFilled(false);
+        cekkosan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cekkosanActionPerformed(evt);
+            }
+        });
+        getContentPane().add(cekkosan, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 470, 110, 30));
+
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Desain/kota.png"))); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 820, 600));
 
         pack();
@@ -116,11 +107,6 @@ public class klikPencari extends javax.swing.JFrame {
     private void ketikcariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ketikcariActionPerformed
     
     }//GEN-LAST:event_ketikcariActionPerformed
-
-    private void testActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_testActionPerformed
-    Balikpapan.setVisible(true);
-    Bandar.setVisible(false);
-    }//GEN-LAST:event_testActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
     new login().setVisible(true);
@@ -137,20 +123,17 @@ public class klikPencari extends javax.swing.JFrame {
     }//GEN-LAST:event_BalikpapanMouseClicked
 
     private void BalikpapanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BalikpapanActionPerformed
-    new pencarian().setVisible(true);
-    this.dispose();
+    
     }//GEN-LAST:event_BalikpapanActionPerformed
 
     private void BandarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BandarActionPerformed
-    new pencarian().setVisible(true);
-    this.dispose();
+    
     }//GEN-LAST:event_BandarActionPerformed
 
-    private void test2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_test2ActionPerformed
-    Bandar.setVisible(true);
-    Balikpapan.setVisible(false);
-    
-    }//GEN-LAST:event_test2ActionPerformed
+    private void cekkosanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cekkosanActionPerformed
+    new pencarian().setVisible(true);
+    this.dispose();
+    }//GEN-LAST:event_cekkosanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,9 +176,8 @@ public class klikPencari extends javax.swing.JFrame {
     private javax.swing.JButton back;
     private javax.swing.JLabel background;
     private javax.swing.JButton cari;
+    private javax.swing.JButton cekkosan;
     private javax.swing.JButton close;
     private javax.swing.JTextField ketikcari;
-    private javax.swing.JButton test;
-    private javax.swing.JButton test2;
     // End of variables declaration//GEN-END:variables
 }
